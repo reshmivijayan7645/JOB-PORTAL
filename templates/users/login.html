@@ -1,0 +1,23 @@
+{% extends 'users/base.html'%}
+
+{% block content %}
+
+<form class="p-4 p-md-5 border rounded bg-light" method="POST">
+
+    {% csrf_token %}
+       
+    <div class="form-floatig mb-3">
+
+    <label for="email"><b>Email or Phone</b></label><br/>
+    <input type="text" placeholder="Enter Email or Phone" name="email" required><br/><br/>
+
+    <label for="psw"><b>Password</b></label><br/>
+    <input type="password" placeholder="Enter Password" name="password" required><br/><br/>
+
+    <button type="submit" class='login-button'>Log In</button><br/><br/>
+    
+  	<label style='color:green;'>test</label>
+</form>
+
+
+{% endblock content%}

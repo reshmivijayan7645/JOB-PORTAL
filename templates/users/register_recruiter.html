@@ -1,0 +1,37 @@
+{% extends 'users/base.html'%}
+
+{% block content %}
+
+<form class="p-4 p-md-5 border rounded bg-light" method="POST">
+
+    {% csrf_token %}
+       
+    <div class="form-floatig mb-3">
+        {% render_filed form.email class="form.control" %}
+        <label for="floatingInput"><b>Email Address</b></label><br/>
+    
+    </div>
+
+    <div class="form-floatig mb-3">
+        {% render_filed form.password1 class="form.control" %}
+        <label for="floatingInput"><b>Password</b></label><br/>
+         
+        </div>
+
+     <div class="form-floatig mb-3">
+        {% render_filed form.password2 class="form.control" %}
+        <label for="floatingInput"><b>Confirm Password</b></label><br/>
+             
+        </div>
+
+    <label for="psw"><b>Password</b></label><br/>
+    <input type="password" placeholder="Enter Password" name="password" required><br/><br/>
+
+    <button type="submit" class='login-button'>Sign Up</button><br/><br/>
+    <small class="text-muted">Already have an account ? <a href="{% url 'login'%}">Sign In </a></small>
+    
+  	<label style='color:green;'>test</label>
+</form>
+
+
+{% endblock content%}
